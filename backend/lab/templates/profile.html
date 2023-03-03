@@ -1,0 +1,33 @@
+{% extends 'partitial/base.html' %}
+{% block 'auth-box' %}
+{% include 'elements/auth-box.html' %}
+{% endblock 'auth-box' %}
+{% block main %}
+<div class='container-fluid'>
+    <h2 class="mb-5">Настройки: Никита</h2>
+    <form style="width: 80%" action="{% url 'question' %}" method="POST" >
+        <div class='d-flex flex-column gap-4'>
+            <div class="input-group flex-nowrap">
+                <span class="input-group-text" id="addon-wrapping" style="width: 120px;">Логин</span>
+                <input type="text" value="Никита" class="form-control" id="login">
+            </div>
+            <div class="input-group flex-nowrap">
+                <span class="input-group-text" id="addon-wrapping" style="width: 120px;">Почта</span>
+                <input type="text" value='nikdem00@gmail.com' class="form-control" id="email">
+            </div>
+            <div class="input-group flex-nowrap">
+                <span class="input-group-text" id="addon-wrapping" style="width: 120px;">Никнейм</span>
+                <input type="text" value='NikDem' class="form-control" id="nickname">
+            </div>
+            <div>
+                <div class='avatar mb-2' style="height: 120px; width: 120px;"></div>
+                <div class="input-group flex-nowrap">
+                    <span class="input-group-text" id="addon-wrapping" style="width: 120px;">Аватар</span>
+                    <input type="file" class="form-control" id="nickname">
+                </div>
+            </div>
+            <button class="btn btn-success align-self-center" style="width: 200px;">Сохранить</button>
+        </div>
+    </form>
+</div>
+{% endblock main %}

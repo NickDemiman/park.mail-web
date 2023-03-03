@@ -1,0 +1,26 @@
+{% extends 'partitial/base.html' %}
+{% block 'auth-box' %}
+{% include 'elements/sign-box.html' %}
+{% endblock 'auth-box' %}
+{% block main %}
+<div class='container-fluid p-0 d-flex'>
+    <form style="width: 80%" action="{% url 'question' %}" method="POST" >
+        <h2>Новый вопрос</h2>
+        <div class="mt-5 d-flex flex-column gap-4">
+            <div class="input-group flex-nowrap">
+                <span class="input-group-text" id="addon-wrapping" style="width: 120px;">Название</span>
+                <input type="text" placeholder="Классное название..." class="form-control" id="title">
+            </div>
+            <div class="input-group flex-nowrap">
+                <span class="input-group-text" id="addon-wrapping" style="width: 120px;">Основное</span>
+                <textarea class="form-control" id="text" style="height: 500px;"></textarea>
+            </div>
+            <div class="input-group flex-nowrap">
+                <span class="input-group-text" id="addon-wrapping" style="width: 120px;">Теги</span>
+                <input type="text" placeholder="first, second, third" class="form-control" id="tags">
+            </div>
+            <button class="btn btn-success align-self-center" style="width: 200px;">Спросить!</button>
+        </div>
+    </form>
+</div>
+{% endblock main %}

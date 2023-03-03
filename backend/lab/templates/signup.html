@@ -1,0 +1,39 @@
+{% extends 'partitial/base.html' %}
+{% block 'auth-box' %}
+{% include 'elements/sign-box.html' %}
+{% endblock 'auth-box' %}
+{% block main %}
+<div class="container-sx">
+    <h2 class="mb-4">Регистрация</h2>
+    <div class="alert alert-danger" role="alert">
+        Что-то пошло не так
+    </div>
+    <div class="d-flex flex-column gap-3">
+        <div class="input-group flex-nowrap">
+            <span class="input-group-text" id="addon-wrapping" style="width: 120px;">Логин</span>
+            <input type="text" class="form-control" id="login">
+        </div>
+        <div class="input-group flex-nowrap">
+            <span class="input-group-text" id="addon-wrapping" style="width: 120px;">Почта</span>
+            <input type="text" class="form-control" id="email">
+        </div>
+        <div class="input-group flex-nowrap">
+            <span class="input-group-text" id="addon-wrapping" style="width: 120px;">Никнейм</span>
+            <input type="text" class="form-control" id="nickname">
+        </div>
+        <div class="input-group flex-nowrap">
+            <span class="input-group-text" id="addon-wrapping" style="width: 120px;">Пароль</span>
+            <input type="text" class="form-control" id="password">
+        </div>
+        <div class="input-group flex-nowrap">
+            <span class="input-group-text" id="addon-wrapping" style="width: 120px;">Повтор пароля</span>
+            <input type="text" class="form-control" id="password_repeat">
+        </div>
+        <div class="input-group flex-nowrap">
+            <span class="input-group-text" id="addon-wrapping" style="width: 120px;">Аватар</span>
+            <input type="file" class="form-control" id="avatar">
+        </div>
+        <button class="btn btn-success align-self-end" style="width: 200px;">Зарегистрироваться</button>
+    </div>
+</div>
+{% endblock main %}
