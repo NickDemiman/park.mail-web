@@ -2,9 +2,27 @@ from django.views import View
 from django.shortcuts import render
 from django.http import HttpResponse
 
+PER_PAGE = 10
+
+def paginate(objects_list: list, page: int, per_page=PER_PAGE):
+    return objects_list[page*per_page::per_page]
+
 class index(View):
     def get(self, request):
-        return render(request, 'index.html')
+        questions = [{
+            'title': 'title ' + str(i),
+            'id': i,
+            'text': 'text' + str(i)
+        } for i in range(30)]
+        try:
+            page = int(request.query_params['page'])
+            questions = paginate(questions, page)
+        except KeyError:
+            questions = questions[:10]
+        config = {
+            
+        }
+        return render(request, 'index.html', {'questions': questions})
 
 class add_question(View):
     def get(self, request):

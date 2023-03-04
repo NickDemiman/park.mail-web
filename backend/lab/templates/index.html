@@ -9,7 +9,7 @@
         <a href="" style='font-size: large'>Самые популярные</a>
     </div>
     <div class='mt-4 d-flex flex-column gap-5'>
-        {% comment %} 1 {% endcomment %}
+        {% for item in questions %}
         <div class='d-flex flex-row gap-3 box'>
             <div class='d-flex flex-column gap-2'>
                 <div class='avatar'></div>
@@ -18,9 +18,9 @@
                     <span>15</span>
                 </div>
             </div>
-            <div class='d-flex flex-column'>
-                <a href="{% url 'question' %}" style='font-size: x-large'>оценить количественный развития</a>
-                <p>не рост развития общества нашей общества уникальными рост постоянный однозначно</p>
+            <div class='container-fluid d-flex flex-column'>
+                <a href="{% url 'question' %}" style='font-size: x-large'>{{item.title}}</a>
+                <p>{{item.text}}</p>
                 <div class='d-flex flex-row justify-content-between'>
                     <a href="">Ответы (3)</a>
                     <div class='d-flex flex-row gap-2'>
@@ -31,115 +31,7 @@
                 </div>
             </div>
         </div>
-        {% comment %} 2 {% endcomment %}
-        <div class='d-flex flex-row gap-3 box'>
-            <div class='d-flex flex-column gap-2'>
-                <div class='avatar'></div>
-                <div class='d-flex flex-row gap-2 align-items-center'>
-                    <i class="bi bi-award" style='font-size: x-large;'></i>
-                    <span>3</span>
-                </div>
-            </div>
-            <div class='d-flex flex-column'>
-                <a href="" style='font-size: x-large'>поэтапного моральных развитие</a>
-                <p>и поэтапного уникальными фиксирует последовательного постоянный нашей мира что оценить</p>
-                <div class='d-flex flex-row justify-content-between'>
-                    <a href="">Ответы (1)</a>
-                    <div class='d-flex flex-row gap-2'>
-                        <span>Теги:</span>
-                        <a href="">c++</a>
-                        <a href="">Ruby</a>
-                    </div>
-                </div>
-            </div>
-        </div>
-        {% comment %} 3 {% endcomment %}
-        <div class='d-flex flex-row gap-3 box'>
-            <div class='d-flex flex-column gap-2'>
-                <div class='avatar'></div>
-                <div class='d-flex flex-row gap-2 align-items-center'>
-                    <i class="bi bi-award" style='font-size: x-large;'></i>
-                    <span>12</span>
-                </div>
-            </div>
-            <div class='d-flex flex-column'>
-                <a href="" style='font-size: x-large'>необходимость развитие до</a>
-                <p>Социально-экономическое третьего фиксирует развитие с статус неузнаваемости количественный. Оценить данными моральных мира статус степени совершенной третьего активности социально-экономическое третьего возрастает. Смешаны сфера необходимость однозначно третьего статус неузнаваемости.</p>
-                <div class='d-flex flex-row justify-content-between'>
-                    <a href="">Ответы (0)</a>
-                    <div class='d-flex flex-row gap-2'>
-                        <span>Теги:</span>
-                        <a href="">F#</a>
-                    </div>
-                </div>
-            </div>
-        </div>
-        {% comment %} 4 {% endcomment %}
-        <div class='d-flex flex-row gap-3 box'>
-            <div class='d-flex flex-column gap-2'>
-                <div class='avatar'></div>
-                <div class='d-flex flex-row gap-2 align-items-center'>
-                    <i class="bi bi-award" style='font-size: x-large;'></i>
-                    <span>0</span>
-                </div>
-            </div>
-            <div class='d-flex flex-column'>
-                <a href="" style='font-size: x-large'>постоянный с ценностей. позволяет чего</a>
-                <p>Рост мира их рост укрепления чего сомнений, до активно возрастает в частности совершенной данными И. И оценить социально-экономическое нашей позволяет последовательного социально-экономическое уникальными что сфера позволяет моральных нет активно возрастает.</p>
-                <div class='d-flex flex-row justify-content-between'>
-                    <a href="">Ответы (5)</a>
-                    <div class='d-flex flex-row gap-2'>
-                        <span>Теги:</span>
-                        <a href="">Python</a>
-                    </div>
-                </div>
-            </div>
-        </div>
-        {% comment %} 5 {% endcomment %}
-        <div class='d-flex flex-row gap-3 box'>
-            <div class='d-flex flex-column gap-2'>
-                <div class='avatar'></div>
-                <div class='d-flex flex-row gap-2 align-items-center'>
-                    <i class="bi bi-award" style='font-size: x-large;'></i>
-                    <span>-6</span>
-                </div>
-            </div>
-            <div class='d-flex flex-column'>
-                <a href="" style='font-size: x-large'>laboris labore irure cillum adipisicing</a>
-                <p>Id aute fugiat aute enim dolor veniam nostrud labore ipsum ea exercitation sint cillum. Aliqua deserunt sunt proident eu magna duis est sint sit magna.</p>
-                <div class='d-flex flex-row justify-content-between'>
-                    <a href="">Ответы (21)</a>
-                    <div class='d-flex flex-row gap-2'>
-                        <span>Теги:</span>
-                        <a href="">Rust</a>
-                    </div>
-                </div>
-            </div>
-        </div>
-        {% comment %} 6 {% endcomment %}
-        <div class='d-flex flex-row gap-3 box'>
-            <div class='d-flex flex-column gap-2'>
-                <div class='avatar'></div>
-                <div class='d-flex flex-row gap-2 align-items-center'>
-                    <i class="bi bi-award" style='font-size: x-large;'></i>
-                    <span>63</span>
-                </div>
-            </div>
-            <div class='d-flex flex-column'>
-                <a href="" style='font-size: x-large'>laboris id</a>
-                <p>Elit mollit consequat officia cupidatat velit qui cupidatat do veniam aliqua laboris. Culpa mollit esse irure esse quis enim culpa adipisicing ex aute. Aliquip non mollit pariatur incididunt nisi sint consequat magna aute qui enim ut. Sint duis cupidatat incididunt est magna culpa dolor culpa enim sint sunt exercitation laborum commodo. Sunt sint aliqua Lorem ipsum eiusmod adipisicing laborum ipsum labore esse ea fugiat deserunt cillum. Occaecat culpa elit aliqua dolore tempor laborum reprehenderit eiusmod mollit eu do consequat adipisicing aliqua. Et duis aliquip adipisicing cupidatat ex ut officia fugiat enim duis adipisicing.</p>
-                <div class='d-flex flex-row justify-content-between'>
-                    <a href="">Ответы (13)</a>
-                    <div class='d-flex flex-row gap-2'>
-                        <span>Теги:</span>
-                        <a href="">C#</a>
-                        <a href="">Python</a>
-                        <a href="">F#</a>
-                        <a href="">C++</a>
-                    </div>
-                </div>
-            </div>
-        </div>
+        {% endfor %}
     </div>
     <nav aria-label="Page navigation example" class='mt-5'>
         <ul class="pagination">
