@@ -2,9 +2,32 @@ from django.views import View
 from django.shortcuts import render
 from django.http import HttpResponse
 
+PER_PAGE = 10
+
+def paginate(objects_list: list, page: int, per_page=PER_PAGE):
+    page -= 1
+    start = page*per_page
+    end = page*per_page + per_page
+    return objects_list[start:end]
+
 class index(View):
     def get(self, request):
-        return render(request, 'index.html')
+
+        questions = [{
+            'title': 'title ' + str(i),
+            'id': i,
+            'text': 'text' + str(i)
+        } for i in range(30)]
+
+        pages = len(questions) // PER_PAGE
+        page = int(request.GET.get('page', 1))
+        questions = paginate(questions, page)
+        
+        config = {
+            'pages': range(1, pages + 1),
+            'questions' : questions
+        }
+        return render(request, 'index.html', config)
 
 class add_question(View):
     def get(self, request):
